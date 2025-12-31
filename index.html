@@ -1,2 +1,163 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link type="text/css" rel="stylesheet" href="resources/sheet.css" >
-<style type="text/css">.ritz .waffle a { color: inherit; }.ritz .waffle .s1{background-color:#ffffff;text-align:left;color:#1a1c1e;font-family:docs-Inter,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s3{background-color:#ffffff;text-align:right;color:#1a1c1e;font-family:docs-Inter,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s0{background-color:#ffffff;text-align:left;font-weight:bold;color:#1a1c1e;font-family:docs-Inter,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s2{background-color:#ffffff;text-align:left;text-decoration:underline;text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;font-family:docs-Inter,Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}</style><div class="ritz grid-container" dir="ltr"><table class="waffle" cellspacing="0" cellpadding="0"><thead><tr><th class="row-header freezebar-origin-ltr"></th><th id="0C0" style="width:100px;" class="column-headers-background">A</th><th id="0C1" style="width:100px;" class="column-headers-background">B</th><th id="0C2" style="width:100px;" class="column-headers-background">C</th><th id="0C3" style="width:100px;" class="column-headers-background">D</th><th id="0C4" style="width:100px;" class="column-headers-background">E</th><th id="0C5" style="width:100px;" class="column-headers-background">F</th><th id="0C6" style="width:100px;" class="column-headers-background">G</th></tr></thead><tbody><tr style="height: 20px"><th id="0R0" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">1</div></th><td class="s0" dir="ltr">ID</td><td class="s0" dir="ltr">Title</td><td class="s0" dir="ltr">Artist</td><td class="s0" dir="ltr">URL</td><td class="s0" dir="ltr">Cover</td><td class="s0" dir="ltr">BaseBPM</td><td class="s0" dir="ltr">Category</td></tr><tr style="height: 20px"><th id="0R1" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">2</div></th><td class="s1" dir="ltr">t1</td><td class="s1" dir="ltr">Aerobic Mix 01</td><td class="s1" dir="ltr">DJ Aero</td><td class="s2 softmerge" dir="ltr"><div class="softmerge-inner" style="width:97px;left:-1px"><a target="_blank" href="https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Flink-to-audio.mp3">https://link-to-audio.mp3</a></div></td><td class="s2 softmerge" dir="ltr"><div class="softmerge-inner" style="width:97px;left:-1px"><a target="_blank" href="https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Flink-to-img.jpg">https://link-to-img.jpg</a></div></td><td class="s3" dir="ltr">140</td><td class="s1" dir="ltr">Aerobic</td></tr><tr style="height: 20px"><th id="0R2" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">3</div></th><td class="s1" dir="ltr">t2</td><td class="s1" dir="ltr">Chill Down</td><td class="s1" dir="ltr">Relax Music</td><td class="s2 softmerge" dir="ltr"><div class="softmerge-inner" style="width:97px;left:-1px"><a target="_blank" href="https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Flink-to-audio.mp3">https://link-to-audio.mp3</a></div></td><td class="s2 softmerge" dir="ltr"><div class="softmerge-inner" style="width:97px;left:-1px"><a target="_blank" href="https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Flink-to-img.jpg">https://link-to-img.jpg</a></div></td><td class="s3" dir="ltr">90</td><td class="s1" dir="ltr">Thư Giãn</td></tr></tbody></table></div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>AeronBeat</title>
+
+  <!-- CSS từ Google Sheet export -->
+  <link rel="stylesheet" href="resources/sheet.css" />
+
+  <style type="text/css">
+    .ritz .waffle a { color: inherit; }
+    .ritz .waffle .s1 {
+      background-color:#ffffff;
+      text-align:left;
+      color:#1a1c1e;
+      font-family:docs-Inter,Arial;
+      font-size:11pt;
+      vertical-align:bottom;
+      white-space:nowrap;
+      direction:ltr;
+      padding:2px 3px;
+    }
+    .ritz .waffle .s3 {
+      background-color:#ffffff;
+      text-align:right;
+      color:#1a1c1e;
+      font-family:docs-Inter,Arial;
+      font-size:11pt;
+      vertical-align:bottom;
+      white-space:nowrap;
+      direction:ltr;
+      padding:2px 3px;
+    }
+    .ritz .waffle .s0 {
+      background-color:#ffffff;
+      text-align:left;
+      font-weight:bold;
+      color:#1a1c1e;
+      font-family:docs-Inter,Arial;
+      font-size:11pt;
+      vertical-align:bottom;
+      white-space:nowrap;
+      direction:ltr;
+      padding:2px 3px;
+    }
+    .ritz .waffle .s2 {
+      background-color:#ffffff;
+      text-align:left;
+      text-decoration:underline;
+      color:#1155cc;
+      font-family:docs-Inter,Arial;
+      font-size:11pt;
+      vertical-align:bottom;
+      white-space:nowrap;
+      direction:ltr;
+      padding:2px 3px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎵 AeronBeat – Music Library</h1>
+
+<p>
+  Đây là dữ liệu gốc từ Google Sheet (export).  
+  Bên dưới sẽ là dữ liệu động từ Firestore (sắp gắn).
+</p>
+
+<hr />
+
+<!-- ===== GOOGLE SHEET EXPORT (GIỮ NGUYÊN) ===== -->
+<div class="ritz grid-container" dir="ltr">
+  <table class="waffle" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th></th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>ID</b></td>
+        <td><b>Title</b></td>
+        <td><b>Artist</b></td>
+        <td><b>URL</b></td>
+        <td><b>Cover</b></td>
+        <td><b>BaseBPM</b></td>
+        <td><b>Category</b></td>
+      </tr>
+      <tr>
+        <td>t1</td>
+        <td>Aerobic Mix 01</td>
+        <td>DJ Aero</td>
+        <td><a href="https://link-to-audio.mp3" target="_blank">Audio</a></td>
+        <td><a href="https://link-to-img.jpg" target="_blank">Cover</a></td>
+        <td>140</td>
+        <td>Aerobic</td>
+      </tr>
+      <tr>
+        <td>t2</td>
+        <td>Chill Down</td>
+        <td>Relax Music</td>
+        <td><a href="https://link-to-audio.mp3" target="_blank">Audio</a></td>
+        <td><a href="https://link-to-img.jpg" target="_blank">Cover</a></td>
+        <td>90</td>
+        <td>Thư Giãn</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
+
+<!-- ===== KHU VỰC APP DỮ LIỆU ĐỘNG ===== -->
+<h2>🔥 Tracks (từ Firestore)</h2>
+<div id="tracks">
+  <i>Đang tải dữ liệu…</i>
+</div>
+
+<!-- ===== FIREBASE / FIRESTORE (CHƯA BẬT) ===== -->
+<!--
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "aerobeat.firebaseapp.com",
+    projectId: "aerobeat"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const container = document.getElementById("tracks");
+  container.innerHTML = "";
+
+  const snap = await getDocs(collection(db, "tracks"));
+  snap.forEach(doc => {
+    const d = doc.data();
+    const div = document.createElement("div");
+    div.innerHTML = `<b>${d.Title}</b> – ${d.Artist} (${d.BaseBPM} BPM)<hr/>`;
+    container.appendChild(div);
+  });
+</script>
+-->
+
+</body>
+</html>
