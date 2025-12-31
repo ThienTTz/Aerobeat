@@ -126,10 +126,22 @@
 <hr />
 
 <!-- ===== KHU VỰC APP DỮ LIỆU ĐỘNG ===== -->
-<h2>🔥 Tracks (từ Firestore)</h2>
-<div id="tracks">
-  <i>Đang tải dữ liệu…</i>
+<div style="margin:16px 0; display:flex; gap:12px; flex-wrap:wrap;">
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="🔍 Tìm bài hoặc nghệ sĩ..."
+    style="padding:10px; min-width:220px;"
+  />
+
+  <select id="categoryFilter" style="padding:10px;">
+    <option value="">🎧 Tất cả thể loại</option>
+    <option value="Aerobic">Aerobic</option>
+    <option value="Thư Giãn">Thư Giãn</option>
+  </select>
 </div>
+
+
 
 
 <script type="module">
@@ -149,6 +161,7 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+let allTracks = [];
 
   const container = document.getElementById("tracks");
   container.innerHTML = "";
@@ -156,33 +169,49 @@
   try {
     const snap = await getDocs(collection(db, "tracks"));
 
-  snap.forEach(doc => {
+  const snap = await getDocs(collection(db, "tracks"));
+allTracks = [];
+
+snap.forEach(doc => {
   const d = doc.data();
-
-  // bỏ qua document thiếu dữ liệu
   if (!d.Title || !d.URL) return;
+  allTracks.push(d);
+});
 
-  const div = document.createElement("div");
-  div.style.border = "1px solid #ddd";
-  div.style.padding = "12px";
-  div.style.marginBottom = "12px";
-  div.style.maxWidth = "400px";
-  div.style.borderRadius = "12px";
+renderTracks(allTracks);
 
-  div.innerHTML = `
-    <img src="${d.Cover || ""}" 
-         style="width:100%;border-radius:8px;margin-bottom:8px"
-         onerror="this.style.display='none'" />
+if (snap.empty) {
+  container.innerHTML = "<i>Không có dữ liệu tracks</i>";
+}
+function renderTracks(list) {
+  container.innerHTML = "";
 
-    <h3 style="margin:4px 0">${d.Title}</h3>
-    <div>${d.Artist || ""} • ${d.BaseBPM || "?"} BPM</div>
+  list.forEach(d => {
+    const div = document.createElement("div");
 
-    <audio controls style="width:100%;margin-top:6px">
-      <source src="${d.URL}" type="audio/mpeg">
-    </audio>
-  `;
+    div.style.border = "1px solid #ddd";
+    div.style.padding = "12px";
+    div.style.marginBottom = "12px";
+    div.style.maxWidth = "400px";
+    div.style.borderRadius = "12px";
 
-  container.appendChild(div);
+    div.innerHTML = `
+      <img src="${d.Cover || ""}" 
+           style="width:100%;border-radius:8px;margin-bottom:8px"
+           onerror="this.style.display='none'" />
+
+      <h3 style="margin:4px 0">${d.Title}</h3>
+      <div>${d.Artist || ""} • ${d.BaseBPM || "?"} BPM</div>
+
+      <audio controls style="width:100%;margin-top:6px">
+        <source src="${d.URL}" type="audio/mpeg">
+      </audio>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
 });
 
 
